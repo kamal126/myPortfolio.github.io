@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio website-KamalChandra</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="E:\acer\CSE APP\jquery-3.6.4.min.js"></script>
+
+  <style>
+    .z-index-n1 {
+      z-index: -1 !important;
+      margin: -30rem;
+      fill: #0cbc87;
+    }
+
+    .ms-3 {
+      margin-left: 0;
+    }
+
+    .translate-middle {
+      -webkit-transform: translate(50%, 50%) !important;
+      transform: translate(-50%, -50%) !important;
+    }
+
+    .start-25 {
+      left: 25% !important;
+    }
+
+    .top-50 {
+      top: 50% !important;
+    }
+
+    .position-absolute {
+      position: absolute !important;
+    }
+
+    #fig {
+      fill: #17a2b8 !important;
+      margin-right: 3rem !important;
+      right: 50% !important;
+      bottom: 30% !important;
+      position: absolute !important;
+      margin: 0 0 1rem;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 40px;
+      margin-inline-end: 40px;
+    }
+
+    .logo-text {
+      display: none;
+      font-size: 20px !important;
+    }
+
+    #github {
+      position: relative !important;
+      height: 50px;
+      margin-bottom: -3rem;
+      margin-left: 25rem;
+    }
+
+    @media screen and (max-width:800px) {
+      .skill-container-right {
+        position: absolute;
+        height: 70vh;
+        overflow: scroll;
+        opacity: .25;
+      }
+      .skill-container-left p{
+        background-color: rgb(215, 138, 15);
+        color:hsl(0, 0%, 0%);
+
+      }
+    }
+
+
+    .contactus-form-container:focus-within {
+      background-color: blue;
+    }
+
+    /* .skill-subHeading{
+      height: 40vh;
+      overflow: scroll;
+    } */
+
+    footer .container {
+      /* display: flex; */
+    }
+
+    #about {
+      width: 20vw;
+      margin-left: 20vw;
+    }
+  </style>
+
+  <style>
+    .btn-pink a {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #03e9f4;
+      font-size: 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: .5s;
+      letter-spacing: 4px;
+    }
+
+    .btn-pink a:hover {
+      background-color: #03e9f4;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
+    }
+
+    .btn-pink a span {
+      position: absolute;
+      display: block;
+    }
+
+    .btn-pink a span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #03e9f4);
+      animation: btn-anim1 1s linear infinite;
+    }
+
+    @keyframes btn-anim1 {
+      0% {
+        left: -100%;
+      }
+
+      50%,
+      100% {
+        left: 100%;
+      }
+    }
+
+    .btn-pink a span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #03e9f4);
+      animation: btn-anim2 1s linear infinite;
+      animation-delay: .25s;
+    }
+
+    @keyframes btn-anim2 {
+      0% {
+        top: -100%;
+      }
+
+      50%,
+      100% {
+        top: 100%;
+      }
+    }
+
+    .btn-pink a span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #03e9f4);
+      animation: btn-anim3 1s linear infinite;
+      animation-delay: .5s
+    }
+
+    @keyframes btn-anim3 {
+      0% {
+        right: -100%;
+      }
+
+      50%,
+      100% {
+        right: 100%;
+      }
+    }
+
+    .btn-pink a span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #03e9f4);
+      animation: btn-anim4 1s linear infinite;
+      animation-delay: .75s
+    }
+
+    @keyframes btn-anim4 {
+      0% {
+        bottom: -100%;
+      }
+
+      50%,
+      100% {
+        bottom: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div class="container">
+      <div class="navbar">
+
+        <div class="logo-container">
+          <img src="image/logop.png" class="logo">
+          <div class="logo-text">KAMAL CHANDRA </div>
+          <script type="text/javascript" src="E:\acer\CSE APP\jquery-3.6.4.min.js"></script>
+
+          <script>
+            $(document).ready(function () {
+              $(".logo").click(function () {
+                $(".logo-text").toggle("fast")
+              });
+            });
+          </script>
+
+        </div>
+        <div class="nav-items">
+          <div><a href="#projects">Projects</a></div>
+          <div><a href="#skills">Skills</a></div>
+          <div><a href="#contactme">Contact Me</a></div>
+        </div>
+
+      </div>
+      <img id="github" src="image/github.svg" />
+      <div class="hero-section">
+
+        <div class="faded-text">KAMAL
+          <span>
+            CHANDRA
+            <span class="position-absolute top-50 start-25 translate-middle ms-3 z-index-n1">
+              <svg width="320px" height="62.1px" enable-background="new 0 0 366 62.1" viewBox="0 0 366 62.1"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="fill-green"
+                  d="m322.5 25.3c0 1.4 2.9 0.8 3.1 1.6 0.8 1.1-1.1 1.3-0.6 2.4 13.3 0.9 26.9 1.7 40.2 4-2.5 0.7-4.9 1.6-7.3 1.1-4-0.9-8.2-1-12.2-1.2-8.5-0.5-16.9-1.9-25.5-1.7h-3.1c2.6 0.6 4.8 0.4 5.7 2.2-7.3 0.4-14.1-0.8-21.2-1.1-0.2 0.6-0.5 1.2-0.8 1.8 21.3 0.7 42.5 1.6 64.3 4.6-4.2 1.6-7.7 1-10.8 0.8-6.8-0.5-13.5-1.3-20.3-1.9-0.9-0.1-2.3-0.1-2.9 0.2-2.2 1.6-4.3 0.6-7 0.4 1.4-1 2.5 0.5 3.9-0.8-5.6-1-10.7 0.6-15.9 0s-10.5-0.6-16.6-0.8c2 1.6 4.6 1.3 6.2 1.4 4.9 0 9.9 0.8 14.8 0.7 5.3-0.1 10.4 0.5 15.5 0.9 3.2 0.3 6.7-0.1 9.9-0.4 1.1-0.1 0.5 0.3 0.6 0.6 0.5 0.9 2.2 0.8 3.6 0.8 5.1-0.1 10.1 0.6 14.8 1.5 0.8 0.1 1.5 0 1.7 0.7 0 0.7-0.8 0.6-1.5 0.8-3.9 1.2-7.4-0.2-11.1-0.2-2 0-4.3-1.5-6 0.5-0.3 0.4-1.4 0.1-2.2-0.1-4.5-0.8-9.1-0.5-13.8-1.5-2.3-0.5-5.6 0.1-8.4 0.5-4 0.5-8-0.7-12.1-0.9-3.4-0.2-7.1-0.5-10.5-0.7-7.1-0.3-14.2-1.2-22.3-0.4 4.9 1.1 9.4 1.2 13.8 1.2 9.7 0 19.2 2.3 28.9 1.6 7.3 3.2 15.9 1.5 23.8 2.9 4.9 0.8 10.1 0.8 15.2 1.2 0.5 0 0.8 0.3 1.1 0.9-20-2.1-40.2-1.4-60.8-3 4.9 2.1 10.8-0.3 15.3 2.7-8 1.9-15.8-0.9-23.5-0.1 2.8 1.4 7.1 1.1 9.3 3.3 0.5 0.5 0.2 1.1-1.2 1.3 2.3 1 3.4-2.1 5.7-0.4 0.2-0.6 0.2-1 0.3-1.5 0.8-0.3 2 0.8 1.5 1.5-0.2 0.1 0 0.3 0 0.5 18.7 0.4 37.3 1.7 56.2 3.6-1.7 1.1-2.8 1.2-4.2 1.1-7.1-0.5-14.1-0.9-21.2-1.4-3.1-0.2-6.3-0.4-9.4-0.4-7.6-0.2-15-0.7-22.4-1-9-0.4-17.9-0.1-26.9-0.1-1.2 0-2.9-0.4-3.9 1 14.8 0.3 29.7 0.6 44.4 1.1 14.8 0.6 29.9 1.3 44.2 4.2-4.3 1-8.8 0.9-13 0.5-5.3-0.5-10.5-1.1-15.8-1.2-11.4-0.3-22.9-0.9-34.3-1.2-17.6-0.4-35.4-0.3-53.1-0.4-10.8-0.1-21.7-0.2-32.5 0-17.8 0.4-35.7 0.2-53.5 0.5-13.1 0.3-26.3 0.1-39.4 0.5-11.1 0.3-22.4 0.6-33.6 1-13.1 0.6-26.1 0.2-39.3 0.4-3.9 0.1-7.6 0.2-11.8-0.2 0.9-1.2 2.3-1.3 3.9-1.3 8.4 0.2 16.6-0.4 24.9-0.9 3.9-0.2 7.9-0.4 11.9 0.2 2.5 0.4 5.3-0.3 8-0.4 7.3-0.4 14.7-0.7 22-0.9 11.9-0.5 23.7-1.2 35.6-0.8 7.7 0.2 15.3-0.6 22.9-0.1 2.3 0.2 4.3-0.5 6.5-1h-17.6c-9.6 0-19-0.1-28.6 0-8 0.1-16.1 0.3-24 0.8-2.6 0.2-5.4 0.1-8.2 0.1-10.1 0.3-20.1 0.6-30.2 0.5-5.4 0-10.7-0.1-15.9 0.6-2.3 0.3-4-1.3-6.5-0.6 0.2 0.4 0.5 0.9 0.6 1.5-1.9 0-4 0.4-4.9-0.1-4.2-2.2-9.4-1.5-14.1-2.3-1.7-0.3-3.7-0.1-4.3-1.5-0.5-1.3 1.9-1.5 2.6-2.6-4.2-1.4-4.6-5-8.5-7.2-1.5 0.2-0.9 2.8-4.2 1.3 0.3 2.4 4.5 3.9 2.8 6.4-2.3 0.3-3.2-0.8-4.2-1.7-2.5-4-5.1-8.4-5.1-12.7 0.2-6.8 0.2-13.8 3.6-20.4 0.3-0.5 0.3-1 0.8-1.4 0.9-0.9 1.2-2.4 3.6-2.1 2.2 0.2 2.5 1.5 2.6 2.6 0.2 1.4 1.5 1.8 3.2 2.5 0.9-1.4 0.5-2.9 2.6-3.7 0.2-0.1 0.3-0.4 0.3-0.4-3.1-2.2 1.2-2.2 2.3-3.3-3.1-1.8-4-4.3-3.7-7-1.5-0.3-3.1-0.4-4.5 0-1.7 0.6-2.2-0.5-2.9-1 0.6-0.5 0.8-1.1 2.2-1.3 7.6-0.9 15.2-1.7 22.9-2 20-0.7 39.9-0.9 59.9-1 11.9-0.1 23.8 0.4 35.6 1.1 3.6 0.2 7.1-0.9 10.7-0.5 7.9 0.9 15.8 0.3 23.8 0.5 7.3 0.1 14.4-0.6 21.7-0.1 12.2 0.9 24.4 0.3 36.7 0.6 9.4 0.3 18.9 0.4 28.2 1 11.9 0.7 23.8 1.3 35.6 2 11.1 0.6 22.4 0.5 33.3 2 7.1 1 14.4 1.1 21.3 2.4 4 0.7 8.2 1.6 12.4 1.9 2.2 0.2 0.9 1 1.5 1.5-4-0.8-8-0.8-12.1-1.4-4.3-0.7-8.5-1-12.8 0.4-2.9 1-6.3 0.2-9.3-0.1-10.2-1.1-20.6-1.6-30.8-2.4-12.1-0.9-24.3-1.4-36.4-2.1-9.9-0.6-20-0.5-29.9-1-11.4-0.6-22.7 0-34.2-0.5-6.3-0.3-12.3-0.3-18.5-0.4-4.2-0.1-8.4 1.3-12.8 0.3 0.6 0.2 1.2 0.7 1.9 0.7 10.5 0 20.9 1.9 31.6 1.7 6.5-0.1 13.1 0.2 19.8 0.8 3.2 0.3 6.3-0.4 9.7-0.1 7.6 0.7 15.5 0.5 23 0.8 12.4 0.5 24.7 0.4 37.1 1.1 13.3 0.7 26.8 2.1 39.9 4.1 6.2 0.9 12.7 1.5 19.2 1.7 0.6 0 1.1 0.1 1.5 0.5-4.6 0.1-9.3 0-13.9-0.5-0.6 1.1 1.4 0.9 1.5 1.9-9.7 1.6-19.6-1.4-29.4-0.1 2.2 1.4 5.1 1 7.4 1 7.3 0.1 14.1 1.3 21.2 1.9 2.8 0.3 5.9 0 8.5 0.8 1.5 0.5 4.6-1.1 4.9 1.3 4-0.7 7.3 1.5 11.1 1.2 4-0.3 7.7 0.6 11.6 1.1 0.8 0.1 2.2 0.3 2.3 1.1 0.2 1-1.1 1.2-2 1.5-3.4 1-6.7-0.4-10.1-0.4-0.9 0-2-0.2-2.9-0.2-9.4 0.1-18.8-1.3-28.3-1.8-6-0.4-12.1-0.9-18.1-1.3 0 0.2 0 0.4-0.2 0.6 6.1 0.5 12.1 1.4 18.3 0.7z">
+                </path>
+              </svg></span>
+            <!--SVG END-->
+          </span>
+        </div>
+
+        <div class="hero-section-left" id="#home">
+          <div class="hero-section-heading">Hi!! KAMAL CHANDRA</div>
+
+          <div class="hero-section-heading hero-section-sub-heading">
+            I am a <span class="role"></span>
+          </div>
+
+          <div class="hero-section-description">
+            I’m a software developer and here is my portfolio website. Here you’ll
+            learn about my journey as a software developer.
+          </div>
+
+          <div class="btn-pink" id="btn">
+            <a href="#contactme">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Hire me
+            </a>
+          </div>
+
+        </div>
+        <!--Figure 2nd-->
+        <figure id="fig" class="fill-info position-absolute bottom-0 end-0 me-5 d-none d-xl-block">
+          <svg width="42px" height="42px">
+            <path
+              d="M21.000,-0.001 L28.424,13.575 L41.999,20.999 L28.424,28.424 L21.000,41.998 L13.575,28.424 L-0.000,20.999 L13.575,13.575 L21.000,-0.001 Z">
+            </path>
+          </svg>
+        </figure>
+        <!--End Figure 2nd-->
+
+
+        <div class="hero-section-right">
+          <div class="absolute icons icon-dots">
+            <img src="image/jupyter.svg" alt="" height="70px" />
+          </div>
+          <div class="absolute icons icon-cube">
+            <img src="image/git.svg" alt="" height="70px" />
+          </div>
+          <div class="absolute icons icon-circle">
+            <img src="image/cpp.svg" alt="" height="70px" />
+          </div>
+          <div class="absolute icons icon-zigzag">
+            <img src="image/react.svg" alt="" height="70px" />
+          </div>
+          <div class="absolute icons icon-plus">
+            <img src="image/java.svg" alt="" height="70px" />
+          </div>
+          <div class="user-image">
+            <!-- <img src="images\userAsset\UserImage.jpg" alt="" /> -->
+            <img src="image/image.jpeg" alt="mypic">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="project-section" id="projects">
+      <h2 class="page-header">Projects</h2>
+
+      <div class="project-container">
+        <div class="project-card" id="project1">
+          <div class="project-number project-number-right">01</div>
+          <div class="project-content project-content-left">
+
+            <div class="project-skills-container">
+              <img class="project-skill" src="image/html.png" alt="" />
+              <img class="project-skill" src="image/css.png" alt="" />
+              <img class="project-skill" src="image/js.png" alt="" />
+              <img class="project-skill" src="image/mysql.svg" alt="" />
+              <img class="project-skill" src="image/npm.svg" alt="" />
+              <img class="project-skill" src="image/bootstrap_icon.svg" alt="" />
+              <img class="project-skill" src="images/Express.png" alt="" />
+              <!-- <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="" /> -->
+              <!-- <img class="project-skill" src="./images/stack/Tailwind.png" alt="" /> -->
+              <img class="project-skill" src="image/nodejs.svg" alt="" />
+              <img class="project-skill" src="image/mongodb.svg" alt="" />
+              <!-- <img class="project-skill" src="./images/stack/Redux.svg" alt="" /> -->
+              <!-- <img class="project-skill" src="./images/stack/Vercel.svg" alt="" /> -->
+            </div>
+
+            <h2 class="project-heading">Health Care Portal</h2>
+
+            <p class="project-subHeading">It's a Health Care Portal for
+              paitents and doctor database store using dbms.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam odio optio, dolore porro eum nisi ipsam
+              eos mollitia, dicta repudiandae minus sint earum at ut laudantium numquam, dolorem distinctio tenetur.
+            </p>
+            <div class="btn-grp">
+              <button class="btn-pink btn-project">Read More</button>
+              <a href="">
+                <img src="image/github.svg" height="45px" alt="">
+                <!-- <i title="GitHubLink" class="fa-brands fa-github icon"></i> -->
+              </a>
+              <a href="">
+                <i title="Live Link" class="fa-solid fa-link icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" id="project2">
+          <div class="project-number project-number-left">02</div>
+          <div class="project-content project-content-right">
+            <div class="project-skill-container">
+              <img class="project-skill" src="image/html.png" alt="" />
+              <img class="project-skill" src="image/css.png" alt="" />
+              <img class="project-skill" src="image/js.png" alt="" />
+              <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="" />
+              <img class="project-skill" src="./images/stack/Tailwind.png" alt="" />
+              <img class="project-skill" src="./images/stack/Redux.svg" alt="" />
+              <img class="project-skill" src="./images/stack/Vercel.svg" alt="" />
+            </div>
+            <h2 class="project-heading">Breaking Copyrights</h2>
+            <p class="project-sub-heading">
+              A platform to download copyrights free youtube music
+            </p>
+            <div class="btn-group">
+              <button class="btn-pink btn-project">Read More</button>
+              <a href="">
+                <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+              </a>
+              <a href="">
+                <i title="Live Link" class="fa-solid fa-link icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" id="project3">
+          <div class="project-number project-number-right">03</div>
+          <div class="project-content project-content-left">
+            <div class="project-skill-container">
+              <img class="project-skill" src="image/html.png" alt="" />
+              <img class="project-skill" src="image/css.png" alt="" />
+              <img class="project-skill" src="image/js.png" alt="" />
+              <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="" />
+              <img class="project-skill" src="./images/stack/Tailwind.png" alt="" />
+              <img class="project-skill" src="./images/stack/Vercel.svg" alt="" />
+            </div>
+
+            <h2 class="project-heading">Movie Viewer </h2>
+            <p class="project-sub-heading">
+              A Website for display the movie review.
+            </p>
+            <div class="btn-group">
+              <button class="btn-pink btn-project">Read More</button>
+              <a href="">
+                <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+              </a>
+              <a href="">
+                <i title="Live Link" class="fa-solid fa-link icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" id="project4">
+          <div class="project-number project-number-left">04</div>
+          <div class="project-content project-content-right">
+            <div class="project-skill-container">
+              <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="" />
+              <img class="project-skill" src="./images/stack/Tailwind.png" alt="" />
+              <img class="project-skill" src="./images/stack/Vercel.svg" alt="" />
+            </div>
+            <h2 class="project-heading">Granit</h2>
+            <p class="project-sub-heading">
+              A architectural website to plan your building or home (Hebrew
+              Language)
+            </p>
+            <div class="btn-group">
+              <button class="btn-pink btn-project">Read More</button>
+              <a href="">
+                <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+              </a>
+              <a href="">
+                <i title="Live Link" class="fa-solid fa-link icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="skills" class="container skills-container ">
+      <div class="skill-fade-text">Skills</div>
+
+      <div class="skill-container-left">
+        <h2 class="skill-heading">
+          <span class="caps">M</span>e and
+          <br />
+          MyTech Stack
+        </h2>
+
+        <div class="skill-subHeading">
+          <p>
+            Hi Everyone My name is "Kamal Chandra" I am a Full Stack Web Developer I
+            have been Solved <a href="#"><b>LeetCode</b></a> 100+ problem and Currently I am Pursuing <b><a
+                href="#">B.tech</a> </b> form
+            <q><b><a href="#">Galgotias University</a></b></q> in Grater Noida U.P India and a full Time Freelancer.
+            Currently I am
+            working on NextJs and Making Beautiful UI-UX are my fey features
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
+            doloremque aspernatur, maiores voluptatum minus laudantium?
+            Perspiciatis accusamus minima porro dolores necessitatibus, magni
+            dolorem et qui veniam nulla sequi molestiae maxime.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem
+            quos ullam veritatis voluptates tenetur qui ipsa nulla culpa itaque?
+          </p>
+        </div>
+      </div>
+
+      <div class="skill-container-right">
+        <img src="./images/userAsset/blob vector.png" class="blob-style" alt="" />
+
+        <img src="image/html.png" alt="" class="skills-logo" />
+        <img src="image/css.png" alt="" class="skills-logo" />
+        <img src="image/js.png" alt="" class="skills-logo" />
+        <img src="image/react.svg" alt="" class="skills-logo" />
+        <img src="image/nodejs.svg" alt="" class="skills-logo" />
+        <img src="image/cpp.svg" alt="" class="skills-logo" />
+        <img src="image/dbms.svg" alt="" class="skills-logo" />
+        <img src="image/java.gif" alt="" class="skills-logo" />
+        <img src="image/jupyter.svg" alt="" class="skills-logo" />
+        <img src="image/linux.png" alt="" class="skills-logo" />
+        <!-- <img src="./images/stack/Next.svg" alt="" class="skills-logo" /> -->
+        <img src="image/react.svg" alt="" class="skills-logo" />
+        <!-- <img src="./images/stack/Tailwind.png" alt="" class="skills-logo" /> -->
+        <img src="image/bootstrap_icon.svg" alt="" class="skills-logo" />
+        <!-- <img src="./images/stack/MaterialUI.svg" alt="" class="skills-logo" /> -->
+        <!-- <img src="./images/stack/Express.png" alt="" class="skills-logo" /> -->
+        <img src="image/git.svg" alt="" class="skills-logo" />
+        <img src="image/github.svg" alt="" class="skills-logo" />
+        <!-- <img src="./images/stack/Graphql.svg" alt="" class="skills-logo" /> -->
+        <img src="image/mongodb.svg" alt="" class="skills-logo" />
+        <!-- <img src="./images/stack/Vercel.svg" alt="" class="skills-logo" /> -->
+        <!-- <img src="./images/stack/ChartJs.svg" alt="" class="skills-logo" /> -->
+        <!-- <img src="./images/stack/Bash.svg" alt="" class="skills-logo" /> -->
+        <img src="image/docker.svg" alt="" class="skills-logo" />
+        <img src="image/mysql.svg" alt="" class="skills-logo" />
+        <img src="image/npm.svg" alt="" class="skills-logo" />
+        <img src="image/py.svg" alt="" class="skills-logo" />
+        <img src="image/redux.svg" alt="" class="skills-logo" />
+        <!-- <img src="./images/stack/K8s.svg" alt="" class="skills-logo" /> -->
+      </div>
+
+
+
+    </div>
+
+    <div class="contactus-form-container" id="contactme">
+      <div class="container">
+
+        <h1 class="contactus-heading">Contact me</h1>
+
+        <h3 class="contactus-sub-heading">
+          Questions, thoughts, or just want to say hello?
+        </h3>
+
+
+        <div class="contactus-form-container">
+          <form class="form" action="">
+            <div class="formfield-container">
+              <input class="formfield" type="text" name="name" id="" placeholder="Enter your name" required />
+
+              <input class="formfield" type="email" name="email" id="" placeholder="Enter your email address"
+                required />
+
+              <input class="formfield" type="text" name="subject" id="" placeholder="Enter your subject" />
+
+              <textarea name="message" id="" cols="30" rows="10" class="formfield formfield-textarea"
+                placeholder="Enter your message"></textarea>
+
+            </div>
+
+            <div>
+              <button type="submit" class="btn-pink" id="submit-btn">
+                Send Message<i class="submit-icon fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-faded-text">Kamal Chandra</div>
+
+          <div class="link-wrapper">
+            <div>
+              <a href="#projects">Projects</a>
+            </div>
+            <div>
+              <a href="#skills">Skills</a>
+            </div>
+            <div>
+              <a href="#contactme">Contact Me</a>
+            </div>
+            <div>
+              <a href="#home">Home</a>
+            </div>
+
+
+          </div>
+          <section id="about">
+            <h1>About</h1>
+            <p>
+              This is a landing page with a full screen video background. Feel free to
+              use this landing page in your projects. keep adding sections, change the
+              video, content , etc
+            </p>
+
+            <h2>Follow Me On Social Media</h2>
+
+            <div class="social">
+              <a href="https://twitter.com/techoford" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+              <a href="https://facebook.com/website-KamalChandra" target="_blank"><i
+                  class="fab fa-facebook fa-3x"></i></a>
+              <a href="https://github.com/kamal126" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+              <a href="https://www.linkedin.com/in/website-KamalChandra" target="_blank"><i
+                  class="fab fa-linkedin fa-3x"></i></a>
+            </div>
+          </section>
+          <!-- <div class="icon-wrapper">
+            <i class="fa fa-angle-up position-absolute top-50 start-50 translate-middle"></i>
+            <i class="fa-brands fa-linkedin icon"></i>
+            <i class="fa-brands fa-github icon"></i>
+            <i class="fa-brands fa-twitter icon"></i>
+            <i class="fa-brands fa-instagram icon"></i>
+            <i class="fa-regular fa-envelope icon"></i>
+          </div> -->
+
+        </div>
+      </div>
+    </footer>
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+  <script>
+    var typeData = new Typed(".role", {
+      strings: [
+        "Full Stack Developer",
+        "Web Developer",
+        "Freelencer",
+        "Frontend Devloper",
+        "Backend Developer",
+        "Coder",
+      ],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 80,
+      backDelay: 1000,
+    });
+  </script>
+</body>
+
+</html>
